@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
 import Tree from 'paths-js/tree';
 import yuan from '../data/yuan.json';
-import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 
-function children(x) {
-  if (x.collapsed) {
-    return []
-  }
-  else {
-    return x.children || []
-  }
-}
+import { ReactSVGPanZoom } from 'react-svg-pan-zoom'
+import { AutoSizer } from 'react-virtualized';
+import 'react-virtualized/styles.css';
 
 class FamilyTree extends Component {
 
   render() {
     var that = this;
 
+    function children(x) {
+      if (x.collapsed) {
+        return []
+      }
+      else {
+        return x.children || []
+      }
+    }
+
     var tree = Tree({
       data: yuan,
       children: children,
-      width: 350,
-      height: 300
+      width: 3500,
+      height: 1500,
+      tension: 0.11
     });
 
     var curves = tree.curves.map(function (c) {
@@ -38,23 +42,23 @@ class FamilyTree extends Component {
 
       var text;
       if (children(n.item).length > 0) {
-        text = <text transform="translate(-10,0)" textAnchor="end">{n.item.name}</text>;
+        text = <text transform="translate(-15,-5)" textAnchor="end">{n.item.name}</text>;
       } else {
         text = <text transform="translate(10,0)" textAnchor="start">{n.item.name}</text>;
       }
 
       return (
         <g key={n.point[1] + n.point[0]} transform={position}>
-          <circle fill="white" stroke="black" r="5" cx="0" cy="0" onClick={toggle} />
+          <circle fill="white" stroke="black" r="8" cx="0" cy="0" onClick={toggle} />
           {text}
         </g>
       )
     })
 
     return <div id="tree">
-      <ReactSVGPanZoom width={1800} height={1000}>
-        <svg width={1800} height={1000}>
-          <g key='svg'>
+      <ReactSVGPanZoom style={{ outline: "1px solid red" }} width={1050} height={650} background='white'>
+        <svg width={3500} height={1500}>
+          <g key='svg' fillOpacity=".5" strokeWidth="2">
             {curves}
             {nodes}
           </g>

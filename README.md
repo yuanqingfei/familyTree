@@ -1,7 +1,7 @@
 Family Tree Show
 =========================
 
-This applicaiton based on [pathjs-react-demo](https://github.com/andreaferretti/paths-js-react-demo)
+This applicaiton based on [pathjs-react-demo](https://github.com/andreaferretti/paths-js-react-demo) and [svg-pan-zoom-example](https://github.com/chrvadala/react-svg-pan-zoom/tree/master/examples/1-basic)
 
 Running
 -------
@@ -14,7 +14,5 @@ Then a running server can start with
 
     npm start
 
-Otherwise a self-contained distribution can be obtained with
 
-    npm run build
 
