@@ -16,7 +16,7 @@ Then a running server can start with
 
 If need deploy
 
-    npm deploy
+    npm run deploy
 
 
 
