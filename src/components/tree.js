@@ -56,7 +56,7 @@ class FamilyTree extends Component {
     })
 
     return <div id="tree">
-      <ReactSVGPanZoom style={{ outline: "1px solid red" }} width={1050} height={650} background='white'>
+      <ReactSVGPanZoom style={{ outline: "1px solid red" }} width={1050} height={650} background='white' tool='pan'>
         <svg width={3500} height={1500}>
           <g key='svg' fillOpacity=".5" strokeWidth="2">
             {curves}

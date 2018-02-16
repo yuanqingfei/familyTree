@@ -14,5 +14,9 @@ Then a running server can start with
 
     npm start
 
+If need deploy
+
+    npm deploy
+
 
 
