@@ -66,7 +66,7 @@ export default class FamilyTree extends Component {
         data: that.state.root,
         // data: yuan,
         children: children,
-        width: 4500,
+        width: 4400,
         height: 2200,
         tension: 0.11
       });

@@ -6,7 +6,7 @@ import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 import Link from './link';
 import Node from './node';
 
-// import css from './d3Tree.css';
+import css from './d3Tree.css';
 
 import yuanCsv from '../data/yuan.dsv';
 
@@ -38,8 +38,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-    height: 1500,
-    width: 3500,
+    height: 2200,
+    width: 4400,
     animated: false,
     duration: 500,
     easing: 0.5,
@@ -63,7 +63,6 @@ const defaultProps = {
         className: 'link'
     },
     svgProps: {
-        className: 'custom'
     },
     textProps: {}
 };

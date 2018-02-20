@@ -1,22 +1,22 @@
-svg.custom .node circle {
-	fill: #F3F3FF;
-	stroke: #2593B8;
-	stroke-width: 2px;
-}
-
-svg.custom .node text {
-	font-size: 15px;
-	background-color: rgb(206, 50, 50);
-	fill: black;
-}
-
-svg.custom .node {
-	cursor: pointer;
-}
-
-svg.custom path.link {
+.node circle {
+	fill: #999;
+  }
+  
+  .node text {
+	font: 10px sans-serif;
+  }
+  
+  .node--internal circle {
+	fill: #555;
+  }
+  
+  .node--internal text {
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+  }
+  
+  .link {
 	fill: none;
-	stroke: rgb(15, 59, 73);
-	stroke-width: 2px;
-}
-
+	stroke: #555;
+	stroke-opacity: 0.4;
+	stroke-width: 1.5px;
+  }
