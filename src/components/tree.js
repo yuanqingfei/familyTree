@@ -11,7 +11,7 @@ export default class FamilyTree extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { showProp: false, root: undefined, generations: undefined, persons:undefined };
+    this.state = { showProp: false, root: undefined, generations: undefined, persons: undefined };
   }
 
   componentDidMount() {
@@ -130,8 +130,8 @@ export default class FamilyTree extends Component {
           </svg>
         </ReactSVGPanZoom>
         <div>
-          本家谱（不完全版）目前世代数为: {that.state.generations}, 包含人数为: {that.state.persons}，时间跨度大约: {30*that.state.generations}年
-        </div>      
+          本家谱（不完全版）目前世代数为: {that.state.generations}, 包含人数为: {that.state.persons}，时间跨度大约: {30 * that.state.generations}年
+        </div>
       </div>
     } else {
       return <div>Loading...</div>;
