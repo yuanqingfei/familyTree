@@ -66,8 +66,8 @@ export default class FamilyTree extends Component {
         data: that.state.root,
         // data: yuan,
         children: children,
-        width: 3500,
-        height: 1500,
+        width: 4500,
+        height: 2200,
         tension: 0.11
       });
 
@@ -87,10 +87,10 @@ export default class FamilyTree extends Component {
         var desc;
         if (children(n.item).length > 0) {
           text = <text transform="translate(-15,-5)" textAnchor="end">{n.item.data.name}</text>;
-          desc = <text transform="translate(-15,-20)" textAnchor="end">{n.item.data.description}</text>;
+          desc = <text transform="translate(-15,13)" textAnchor="end">{n.item.data.description}</text>;
         } else {
           text = <text transform="translate(10,0)" textAnchor="start">{n.item.data.name}</text>;
-          desc = <text transform="translate(10,-20)" textAnchor="start">{n.item.data.description}</text>;
+          desc = <text transform="translate(10,13)" textAnchor="start">{n.item.data.description}</text>;
         }
 
         function mouseIn() {
