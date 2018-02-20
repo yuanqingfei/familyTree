@@ -11,7 +11,7 @@ export default class FamilyTree extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { showProp: false, root: undefined };
+    this.state = { showProp: false, root: undefined, generations: undefined, persons:undefined };
   }
 
   componentDidMount() {
@@ -29,25 +29,25 @@ export default class FamilyTree extends Component {
         .id(function (d) { return d.id; })
         .parentId(function (d) { return d.parent; })(data);
 
-      that.setState({
-        root: myRoot
+
+
+      var hierarchyRoot = hierarchy(myRoot);
+
+      var height = hierarchyRoot.height;
+      // console.log("世代: " + (height + 1));
+
+      var totalCount = 0;
+      hierarchyRoot.each(function (d) {
+        totalCount = totalCount + 1;
       });
 
-      // var hierarchyRoot = hierarchy(myRoot);
-
-      // var height = hierarchyRoot.height;
-      // console.log("count:" + (height + 1));
-
-      // hierarchyRoot.each(function (d) {
-      //   console.log("xxx: " +d.id);
-      // });
+      // console.log("总人数: " + totalCount);
+      that.setState({
+        root: myRoot,
+        generations: height + 1,
+        persons: totalCount
+      });
     });
-
-    // var hierarchyRoot = hierarchy(yuan);
-    // hierarchyRoot.each(function(d){
-    //   console.log(d.data.name);
-    // });
-    
   }
 
   render() {
@@ -129,6 +129,9 @@ export default class FamilyTree extends Component {
             </g>
           </svg>
         </ReactSVGPanZoom>
+        <div>
+          本家谱（不完全版）目前世代数为: {that.state.generations}, 包含人数为: {that.state.persons}，时间跨度大约: {30*that.state.generations}年
+        </div>      
       </div>
     } else {
       return <div>Loading...</div>;
