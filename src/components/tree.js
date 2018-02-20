@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tree from 'paths-js/tree';
 import { dsv } from 'd3-fetch';
-import { hierarchy, stratify, tree } from 'd3-hierarchy';
+import { hierarchy, stratify } from 'd3-hierarchy';
 import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 
 // import yuan from '../data/yuan.json';
@@ -17,7 +17,7 @@ export default class FamilyTree extends Component {
   componentDidMount() {
     var that = this;
 
-    var myDsvData = dsv("|", yuanCsv, function (d) {
+    dsv("|", yuanCsv, function (d) {
       return {
         id: d.id,
         name: d.name,

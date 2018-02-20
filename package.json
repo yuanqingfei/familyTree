@@ -17,23 +17,17 @@
     "build": "react-scripts build"
   },
   "dependencies": {
-    "bluebird": "^3.1.1",
-    "bootstrap": "^3.3.6",
     "d3-fetch": "^1.0.1",
     "d3-hierarchy": "^1.1.5",
     "fetchify": "0.0.2",
     "gh-pages": "^1.1.0",
     "lodash": "^3.10.1",
     "paths-js": "^0.4.5",
-    "prismjs": "^1.5.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.0.0",
-    "react-svg-pan-zoom": "^2.15.1",
-    "react-tree-graph": "^3.1.0",
-    "react-virtualized": "9.18.5",
-    "vivus": "^0.2.3"
+    "react-svg-pan-zoom": "^2.15.1"
   },
   "devDependencies": {
     "react-scripts": "^1.0.14"

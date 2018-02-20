@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { dsv } from 'd3-fetch';
-import { hierarchy, stratify, tree, cluster } from 'd3-hierarchy';
+import { hierarchy, stratify, tree } from 'd3-hierarchy';
 import PropTypes from 'prop-types';
 import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 import Link from './link';
 import Node from './node';
+
+// import css from './d3Tree.css';
 
 import yuanCsv from '../data/yuan.dsv';
 
@@ -44,7 +46,7 @@ const defaultProps = {
     getChildren: n => n.children,
     steps: 20,
     keyProp: 'id',
-    labelProp: 'name',
+    labelProp: 'id',
     margins: {
         bottom: 10,
         left: 20,
@@ -60,7 +62,9 @@ const defaultProps = {
     pathProps: {
         className: 'link'
     },
-    svgProps: {},
+    svgProps: {
+        className: 'custom'
+    },
     textProps: {}
 };
 
@@ -73,7 +77,7 @@ export default class D3FamilyTree extends Component {
     componentDidMount() {
         var that = this;
 
-        var myDsvData = dsv("|", yuanCsv, function (d) {
+        dsv("|", yuanCsv, function (d) {
             return {
                 id: d.id,
                 name: d.name,

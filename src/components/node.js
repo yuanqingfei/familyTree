@@ -29,7 +29,7 @@ export default class Node extends React.PureComponent{
 			<g {...this.props.gProps} transform={this.getTransform()} onClick={this.handleClick}>
 				<circle {...this.props.circleProps} r={this.props.radius}/>
 				<text {...this.props.textProps} dx={this.props.radius + 0.5} dy={this.props.offset}>
-					{this.props[this.props.labelProp]}
+					{this.props.data.name}
 				</text>
 			</g>);
 	}
