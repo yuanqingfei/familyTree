@@ -5,7 +5,7 @@ import { hierarchy, stratify } from 'd3-hierarchy';
 import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 
 // import yuan from '../data/yuan.json';
-import yuanCsv from '../data/yuan.dsv';
+import yuanCsv from '../../data/yuan.dsv';
 
 export default class FamilyTree extends Component {
 

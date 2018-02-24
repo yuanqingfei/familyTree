@@ -6,9 +6,9 @@ import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 import Link from './link';
 import Node from './node';
 
-import css from './d3Tree.css';
+// import css from './d3Tree.css';
 
-import yuanCsv from '../data/yuan.dsv';
+import yuanCsv from '../../data/yuan.dsv';
 
 
 const propTypes = {
@@ -53,7 +53,7 @@ const defaultProps = {
         right: 150,
         top: 10
     },
-    nodeOffset: 3.5,
+    nodeOffset: -3.5,
     nodeRadius: 5,
     circleProps: {},
     gProps: {
