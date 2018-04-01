@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import { ReactSVGPanZoom } from 'react-svg-pan-zoom';
 import Link from './link';
 import Node from './node';
-
-// import css from './d3Tree.css';
-
 import yuanCsv from '../../data/yuan.dsv';
 
 

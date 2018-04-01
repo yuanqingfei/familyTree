@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-class Panel extends Component {
+export default class Panel extends Component {
   render() {
     return (
       <Grid>
@@ -23,6 +23,4 @@ class Panel extends Component {
       </Grid>
     )
   }
-};
-
-export default Panel;
+}
