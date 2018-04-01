@@ -37,14 +37,25 @@ export default class DotTree extends Component {
             // console.log(myRoot);
             createNodesEdges(myRoot, dotSrc);
             dotSrc = dotSrc + docSrcEnd;
-            var graphviz = d3.select("#graph").graphviz();
+
+            var svgContainer = d3.select("#graph").append("svg")
+                .attr("id", "dag")
+                .attr("width", 1000)
+                .attr("height", 750);
+
+            var pieDagContainer = svgContainer.append("g")
+                .attr("id", "pieDagContainer")
+                .attr("transform", "scale(0.25)");
+            var graphviz = pieDagContainer.graphviz();
+
+            // var graphviz = d3.select("#graph").graphviz();
             function render(dotSrc) {
                 // console.log('DOT source =', dotSrc);
-                var transition1 = d3.transition()
-                    .delay(100)
-                    .duration(1000);
+                // var transition1 = d3.transition()
+                //     .delay(100)
+                //     .duration(1000);
                 graphviz
-                    .transition(transition1)
+                    // .transition(transition1)
                     .renderDot(dotSrc);
             }
             render(dotSrc);
@@ -55,7 +66,7 @@ export default class DotTree extends Component {
         return (
             <div className="App">
                 <script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.1/viz.min.js" type="javascript/worker"></script>
-                <div id="graph" style={{ textalign: "center", outline: "1px solid red" }} width={1050} height={650} background='white'>
+                <div id="graph" style={{ textalign: "center", outline: "1px solid red" }} width={1150} height={750} background='white'>
                 </div>
             </div>
         );
