@@ -4,7 +4,6 @@ import Panel from './panel.js';
 import FamilyTree from './pathjs/tree.js';
 import D3FamilyTree from './d3/d3Tree.js';
 import DotTree from './dot/dotTree.js';
-import DotTree2 from './dot2/dotTree2.js';
 
 export default class Composite extends Component {
   components = [
@@ -17,9 +16,6 @@ export default class Composite extends Component {
     <Panel title="朱仓袁氏家谱-dot版" text="始祖清，本海州陇西都新二里人也，元末洪武初年，避乱至此。相传为红军赶散，盖当永乐年间山东被剿，遂无居民，因使红衣军人分海州民移居于此，此红军之一说也。或又云：红军为红头蝇也，所至之处，人皆疫死，以此流亡矣。又云：红军贼。后二说皆无所考，疑前说为是。" sources={['components/d3Tree']}>
       <DotTree />
     </Panel>
-    // <Panel title="朱仓袁氏家谱-dot版" text="始祖清，本海州陇西都新二里人也，元末洪武初年，避乱至此。相传为红军赶散，盖当永乐年间山东被剿，遂无居民，因使红衣军人分海州民移居于此，此红军之一说也。或又云：红军为红头蝇也，所至之处，人皆疫死，以此流亡矣。又云：红军贼。后二说皆无所考，疑前说为是。" sources={['components/d3Tree']}>
-    //   <DotTree2 />
-    // </Panel>
   ];
 
   render() {
@@ -33,8 +29,8 @@ export default class Composite extends Component {
             {this.components[1]}
           </Row> */}
           <Row>
-            {this.components[1]}
-          </Row>          
+            {this.components[2]}
+          </Row>
         </Grid>
       </div>
     )
