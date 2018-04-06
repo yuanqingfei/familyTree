@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3'
-import Graphviz from 'd3-graphviz';
+import d3graphviz from 'd3-graphviz';
 import yuanCsv from '../../data/yuan_dot.dsv';
 
 var dotSrc = `
@@ -65,7 +65,6 @@ export default class DotTree extends Component {
     render() {
         return (
             <div className="App">
-                <script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.1/viz.min.js" type="javascript/worker"></script>
                 <div id="graph" style={{ textalign: "center", outline: "1px solid red" }} width={1150} height={750} background='white'>
                 </div>
             </div>
