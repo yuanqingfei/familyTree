@@ -22,12 +22,12 @@ export default class Composite extends Component {
     return (
       <div className="container">
         <Grid>
-          {/* <Row>
+          <Row>
             {this.components[0]}
           </Row>
           <Row>
             {this.components[1]}
-          </Row> */}
+          </Row> 
           <Row>
             {this.components[2]}
           </Row>

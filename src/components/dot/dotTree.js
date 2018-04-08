@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3'
-import d3graphviz from 'd3-graphviz';
+import graphviz from 'd3-graphviz';
 import yuanCsv from '../../data/yuan_dot.dsv';
 
 var dotSrc = `
@@ -46,19 +46,20 @@ export default class DotTree extends Component {
             var pieDagContainer = svgContainer.append("g")
                 .attr("id", "pieDagContainer")
                 .attr("transform", "scale(0.25)");
-            var graphviz = pieDagContainer.graphviz();
+            var myGraphviz = pieDagContainer.graphviz();
 
-            // var graphviz = d3.select("#graph").graphviz();
-            function render(dotSrc) {
-                // console.log('DOT source =', dotSrc);
-                // var transition1 = d3.transition()
-                //     .delay(100)
-                //     .duration(1000);
-                graphviz
-                    // .transition(transition1)
-                    .renderDot(dotSrc);
-            }
-            render(dotSrc);
+            // var myGraphviz = d3.select("#graph").graphviz();
+
+            // function render(dotSrc) {
+            //     // console.log('DOT source =', dotSrc);
+            //     var transition1 = d3.transition()
+            //         .delay(100)
+            //         .duration(1000);
+            //     graphviz
+            //         .transition(transition1)
+            //         .renderDot(dotSrc);
+            // }
+            myGraphviz.renderDot(dotSrc);
         });
     }
 
